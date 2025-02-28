@@ -24,6 +24,6 @@ function handleCommand(command) {
             alert('Contact page coming soon!');
             break;
         default:
-            alert('Invalid command: $(command)');
+            alert(`Command not recognized: ${command}`);
     }
 }
