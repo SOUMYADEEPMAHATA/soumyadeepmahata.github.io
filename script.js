@@ -1,14 +1,18 @@
 document.addEventListener('DOMContentLoaded', function() {
     //Basic terminal-style navigation
-    const inputField = document.getElementById('input-line');
+    const inputField = document.getElementById('terminalInput');
 
-    inputField.addEventListener('keydown', function(event) {
-        if (event.key === 'Enter') {
-            const command = inputField.value.trim().toLowerCase();
-            handleCommand(command);
-            inputField.value = ''; // Clear input
-        }
-    });
+    if (inputField) {
+        inputField.addEventListener('keydown', function(event) {
+            if (event.key === 'Enter') {
+                const command = inputField.value.trim().toLowerCase();
+                handleCommand(command);
+                inputField.value = ''; // Clear input
+            }
+        });
+    } else {
+        console.error('Element with ID "terminalInput" not found.');
+    }
 
     function handleCommand(command) {
         switch (command) {
