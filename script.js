@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     //Basic terminal-style navigation
-    const inputField = document.getElementById('terminal-input');
+    const inputField = document.getElementById('input-line');
 
     inputField.addEventListener('keydown', function(event) {
         if (event.key === 'Enter') {
